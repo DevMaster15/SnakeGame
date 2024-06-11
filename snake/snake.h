@@ -4,16 +4,15 @@
 
 class Snake {
     private: 
-        int headX = 0;
-        int headY = 0;
+        int headX = 1;
+        int headY = 1;
         std::vector<int> bodyX;  // body orizzontale
         std::vector<int> bodyY;  // body verticale
         char head = 'O', body = 'o';
-
     public:
-        Snake();
         int getHeadX();
         int getHeadY();
+        char getHead();
 };
 
 #endif

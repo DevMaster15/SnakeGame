@@ -1,4 +1,4 @@
-#include "snake.h"
+#include "./snake.h"
 #include <cstdlib>
 #include <ncurses.h>
 
@@ -10,3 +10,6 @@ int Snake::getHeadY(){
     return this->headY;
 }
 
+char Snake::getHead(){
+    return this->head;
+}
