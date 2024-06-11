@@ -12,6 +12,8 @@ enum eDirections {
 
 eDirections dir;
 
+Snake::Snake(int headX, int headY, int tailX, int tailY) : headX(headX), headY(headY), tailX(tailX), tailY(tailY) {}
+
 void Snake::move(){
     initscr();
     cbreak();
