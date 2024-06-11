@@ -3,6 +3,6 @@
 
 int main(){
     std::cout << "Setup game..." << std::endl;
-    Game game = Game(400, 400);
-    return 0;
+    Game game = Game();
+    game.refresh();
 }
