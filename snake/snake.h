@@ -9,6 +9,7 @@ class Snake {
         int tailX;
         int tailY;
     public:
+        Snake(int headX, int headY, int tailX, int tailY);
         int getHeadX();
         int getHeadY();
         int getTailX();
