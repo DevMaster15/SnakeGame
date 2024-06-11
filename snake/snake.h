@@ -1,22 +1,19 @@
 #ifndef SNAKE_H
 #define SNAKE_H
-
+#include <vector>
 
 class Snake {
     private: 
-        int headX;
-        int headY;
-        int tailX;
-        int tailY;
+        int headX = 0;
+        int headY = 0;
+        std::vector<int> bodyX;  // body orizzontale
+        std::vector<int> bodyY;  // body verticale
+        char head = 'O', body = 'o';
+
     public:
-        Snake(int headX, int headY, int tailX, int tailY);
+        Snake();
         int getHeadX();
         int getHeadY();
-        int getTailX();
-        int getTailY();
-        void setX();
-        void setY();
-        void move();
 };
 
 #endif
