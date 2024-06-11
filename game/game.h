@@ -1,17 +1,15 @@
 #ifndef GAME_H
 #define GAME_H
+#include <string>
 
 class Game {
     private:
         int score = 0;
         int gameOver = false;
-        int height;
-        int width;
+        std::string** area;
     public:
-        Game(int h, int w);
-        int getScore();
-        int getHeight();
-        int getWidth();
         void setUp();
+        void drawBoard();
+        void refresh();
 };
 #endif
