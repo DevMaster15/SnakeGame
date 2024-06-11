@@ -44,5 +44,4 @@ void Snake::move(){
         // Altra logica per il gioco
     }
     endwin();
-    }
-};
+}
