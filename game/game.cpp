@@ -9,7 +9,7 @@
 #include "../snake/snake.h"
 
 
-void Game::setUp(){
+void Game::setUp(Snake snake){
     int dimension = this->getDimension();
     area = new std::string* [dimension];
 
@@ -17,21 +17,22 @@ void Game::setUp(){
         area[i] = new std::string[dimension];
     }
 
-    this->drawBoard(dimension);
+    this->drawBoard(dimension, snake);
    
 }
 
 
 void Game::refresh(){
+    Snake snake = Snake();
+
     do{
         std::system("clear");
-        this->setUp();
+        this->setUp(snake);
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));  //sleep for 1s 
     } while(!gameOver);
 }
 
-void Game::drawBoard(int dim){
-    Snake snake = Snake();
+void Game::drawBoard(int dim, Snake snake){
     int snakeHeadX = snake.getHeadX();
     int snakeHeadY = snake.getHeadY();
 
